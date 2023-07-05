@@ -47,6 +47,7 @@ public class GunLogic : MonoBehaviour
         if (bulletnum <= 0)
         {
             CancelFire();
+            Debug.Log("弹药已空！！！");
         }
     }
 
