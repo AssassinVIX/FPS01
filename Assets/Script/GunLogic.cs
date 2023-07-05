@@ -33,10 +33,18 @@ public class GunLogic : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) )
             {
+                
                 if (!IsInvoking("Fire"))
                 {
                     InvokeRepeating("Fire", fireInterval, fireInterval);
                 }
+            }
+        }
+        if (bulletnum <= 0)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("弹药已空！！！");
             }
         }
         if (Input.GetMouseButtonUp(0))
@@ -47,7 +55,6 @@ public class GunLogic : MonoBehaviour
         if (bulletnum <= 0)
         {
             CancelFire();
-            Debug.Log("弹药已空！！！");
         }
     }
 
