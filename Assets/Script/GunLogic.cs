@@ -16,9 +16,6 @@ public class GunLogic : MonoBehaviour
     public float maxbullet = 30;
     //当前子弹数
     private float bulletnum = 30;
-    //引用开火点节点
-    public GameObject firepoint;
-    public GameObject realFirePoint;
     // Start is called before the first frame update
     void Start()
     {
