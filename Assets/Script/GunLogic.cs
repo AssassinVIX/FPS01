@@ -6,8 +6,10 @@ public class GunLogic : MonoBehaviour
 {
     //引用子弹节点
     public GameObject Bullet;
+    public GameObject realBullet;
     //初始化子弹位置
     public Transform firePoint;
+    public Transform realFirepoint;
     //子弹发射间隔
     public float fireInterval;
     //弹夹内子弹数
@@ -16,6 +18,7 @@ public class GunLogic : MonoBehaviour
     private float bulletnum = 30;
     //引用开火点节点
     public GameObject firepoint;
+    public GameObject realFirePoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,9 +73,12 @@ public class GunLogic : MonoBehaviour
     {
         //初始化子弹实例
         GameObject bullet = Instantiate(Bullet, firePoint);
+        GameObject realbullet = Instantiate(realBullet, realFirepoint);
         //初始化子弹位置及角度
         bullet.transform.position = firePoint.position;
         bullet.transform.eulerAngles = firePoint.transform.eulerAngles;
+        realbullet.transform.position = realFirepoint.position;
+        realbullet.transform.eulerAngles = realFirepoint.transform.eulerAngles;
         //开火后减少当前子弹数
         bulletnum = bulletnum - 1;
         Debug.Log("当前弹药" + bulletnum);

@@ -19,7 +19,7 @@ public class EnemyLogic : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name.StartsWith("Bullet"))
+        if (other.name.StartsWith("RealBullet"))
         {
             enemylife = enemylife - 1;
             Destroy(other.gameObject);
