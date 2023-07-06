@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class CameraLogic : MonoBehaviour
 {
-    //鼠标灵敏度
-    public float sensitivity = 100.0f; 
-    public float upperBound = 10f; // 上边界
-    public float lowerBound = -10f; // 下边界
+    // 相机旋转灵敏度
+    public float sensitivity = 2f;
+    // 最小允许的上角度
+    public float minYAngle = -80f;
+    // 最大允许的下角度
+    public float maxYAngle = 80f; 
+
+    private float rotationX = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,17 +21,12 @@ public class CameraLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //获取鼠标移动距离
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
-        //根据鼠标灵敏度和移动距离计算旋转角度，并应用于目标物体上
-        this.transform.Rotate(-mouseY, 0, 0);
-        if (mouseY > 80)
-        {
-            this.transform.Rotate(80, 0, 0);
-        }
-        if (mouseY < -80)
-        {
-            this.transform.Rotate(-80, 0, 0);
-        }
+        // 获取鼠标移动的偏移量
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
+        // 计算垂直方向的旋转
+        rotationX -= mouseY;
+        // 限制角度在设定范围内
+        rotationX = Mathf.Clamp(rotationX, minYAngle, maxYAngle); 
+        transform.localRotation = Quaternion.Euler(rotationX, 180f, 0f);
     }
 }
