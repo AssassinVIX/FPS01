@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerLogic : MonoBehaviour
 {
     //角色跳跃时被施加的力，必须拥有刚体组件
-    public float jumpForce = 5f;
+    public readonly float jumpForce = 5f;
     //角色移动速度
     public float movespeed;
     //鼠标灵敏度
