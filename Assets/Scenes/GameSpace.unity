@@ -1773,9 +1773,9 @@ RectTransform:
   m_Father: {fileID: 338795395}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 295.2, y: 114.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 245.20001, y: 64.5}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &868804815
@@ -2329,9 +2329,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aebd579f2ed5a914db7e3d68728806ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 2
-  minYAngle: -80
-  maxYAngle: 80
+  Sensitivity: 2
+  MinYAngle: -80
+  MaxYAngle: 80
 --- !u!1 &968561578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,12 +2678,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 184d8380581cdfe40a81978c8d865a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
-  movespeed: 5
-  sensitivity: 100
-  spaceInterval: 1
-  score: 0
-  playerlife: 5
+  MoveSpeed: 5
+  Sensitivity: 100
+  SpaceInterval: 2
+  Score: 0
+  Playerlife: 5
+  HealthText: {fileID: 1939152006}
+  ScoreText: {fileID: 1968734201}
 --- !u!65 &1163071181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3054,9 +3055,9 @@ RectTransform:
   m_Father: {fileID: 338795395}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 245.9, y: -118.2}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 195.9, y: -68.2}
   m_SizeDelta: {x: 130, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258189714
@@ -3092,7 +3093,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5F53\u524D\u5F39\u836F\u91CF\uFF1A30/999"
+  m_Text: "\u5F53\u524D\u5F39\u836F\u91CF\uFF1A30/360"
 --- !u!222 &1258189715
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5333,11 +5334,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 555642377328643481, guid: dcb53bf13d9c49d4481add707781d9a6, type: 3}
-  realBullet: {fileID: 6674919596869181210, guid: f561e32e53d137f43b85284dc97aadda, type: 3}
-  firePoint: {fileID: 569612845}
-  realFirepoint: {fileID: 1834542835}
-  fireInterval: 0.5
-  maxbullet: 30
+  RealBullet: {fileID: 6674919596869181210, guid: f561e32e53d137f43b85284dc97aadda, type: 3}
+  FirePoint: {fileID: 569612845}
+  RealFirepoint: {fileID: 1834542835}
+  FireInterval: 0
+  MaxBullet: 30
+  Amno: 30
+  RemainingAmno: 30
+  BulletText: {fileID: 1258189714}
 --- !u!23 &2001548848
 MeshRenderer:
   m_ObjectHideFlags: 0

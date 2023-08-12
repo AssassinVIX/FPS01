@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerLogic : MonoBehaviour
 {
     //角色跳跃时被施加的力，必须拥有刚体组件
-    public readonly float jumpForce = 5f;
+    public readonly float JumpForce = 5f;
     //角色移动速度
-    public float movespeed;
+    public float MoveSpeed = 5;
     //鼠标灵敏度
-    public float sensitivity = 100.0f;
+    public float Sensitivity = 100.0f;
     //允许两次按下空格键之间的最短时间间隔
-    public float spaceInterval = 2f; 
-    private float lastSpaceTime = 0f;
+    public float SpaceInterval = 2f; 
+    private float LastSpaceTime = 0f;
     //玩家得分
-    public float score = 0;
+    public float Score = 0;
     //玩家生命
-    public float playerlife = 5;
+    public float Playerlife = 5;
+    public Text HealthText;
+    public Text ScoreText;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,40 +35,40 @@ public class PlayerLogic : MonoBehaviour
         //通过获取W,A,S,D四个按键事件改变x、y两个方向的速度
         if (Input.GetKey(KeyCode.A))
         {
-            dx = movespeed;
+            dx = MoveSpeed;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            dx = -movespeed;
+            dx = -MoveSpeed;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            dz = -movespeed;
+            dz = -MoveSpeed;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            dz = movespeed;
+            dz = MoveSpeed;
         }
 
         //获取空格事件，并引用物体刚体组件
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Time.time - lastSpaceTime < spaceInterval)
+            if (Time.time - LastSpaceTime < SpaceInterval)
             {
                 //判断两次按下空格键时间间隔是否足够长
                 return;
             }
 
             //执行按下空格键操作
-            lastSpaceTime = Time.time;
+            LastSpaceTime = Time.time;
             //引用刚体组件，对物体施加向上的力
-            GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            GetComponent<Rigidbody>().AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
         //物体移动
         this.transform.Translate(dx * Time.deltaTime, 0, dz * Time.deltaTime);
 
         //获取鼠标移动距离
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * Sensitivity * Time.deltaTime;
 
         //根据鼠标灵敏度和移动距离计算旋转角度，并应用于目标物体上
         this.transform.Rotate(0, mouseX, 0);
@@ -76,25 +79,26 @@ public class PlayerLogic : MonoBehaviour
         if (other.name.StartsWith("enemyBullet"))
         {
             Destroy(other.gameObject);
-            SendMessage("unvalue");
+            SendMessage("Unvalue");
         }
     }
-    public void unvalue()
+    public void Unvalue()
     {
-        if (score > 0)
+        if (Score > 0)
         {
-            score = score - 1;
+            Score = Score - 1;
         }
-        playerlife = playerlife - 1;
-        if (playerlife <= 0)
+        Playerlife = Playerlife - 1; 
+        HealthText.text = "当前血量：" + Playerlife;
+        if (Playerlife <= 0)
         {
             Destroy(this.gameObject);
         }
-
     }
 
-    public void value()
+    public void Value()
     {
-        score = score + 1;
+        Score = Score + 1;
+        ScoreText.text = "玩家得分：" + Score;
     }
 }

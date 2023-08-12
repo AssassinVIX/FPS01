@@ -26,7 +26,7 @@ public class EnemyLogic : MonoBehaviour
             if (enemylife <= 0)
             {
                 Destroy(this.gameObject);
-                GameObject.Find("Player").SendMessage("value");
+                GameObject.Find("Player").SendMessage("Value");
             }
         }
         

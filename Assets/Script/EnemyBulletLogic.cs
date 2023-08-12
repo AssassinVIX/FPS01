@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class EnemyBulletLogic : MonoBehaviour
 {
-    public float speed = 100f;
+    public float Speed = 100f;
 
-    public float lifetime = 3;
+    public float Lifetime = 3;
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("selfdestory", lifetime);
+        Invoke("Selfdestory", Lifetime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.Translate(0, 0, speed * Time.deltaTime, Space.Self);
+        this.transform.Translate(0, 0, Speed * Time.deltaTime, Space.Self);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,8 +27,8 @@ public class EnemyBulletLogic : MonoBehaviour
         }
     }
 
-    private void selfdestory()
+    private void Selfdestory()
     {
-        Destroy(this.gameObject, lifetime);
+        Destroy(this.gameObject, Lifetime);
     }
 }

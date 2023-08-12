@@ -10,7 +10,7 @@ public class BulletLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("selfdestory", lifetime );
+        Invoke("Selfdestory", lifetime );
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class BulletLogic : MonoBehaviour
         }
     }
 
-    private void selfdestory()
+    private void Selfdestory()
     {
         Destroy(this.gameObject ,lifetime);
     }
