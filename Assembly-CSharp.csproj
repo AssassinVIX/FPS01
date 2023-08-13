@@ -56,15 +56,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\BulletLogic.cs" />
-    <Compile Include="Assets\Script\PlayerLogic.cs" />
-    <Compile Include="Assets\Script\GunLogic.cs" />
-    <Compile Include="Assets\Script\EnemyLogic.cs" />
-    <Compile Include="Assets\Script\HealthCreator.cs" />
-    <Compile Include="Assets\Script\MainLogic.cs" />
-    <Compile Include="Assets\Script\EnemyBulletLogic.cs" />
-    <Compile Include="Assets\Script\EnemyCreator.cs" />
-    <Compile Include="Assets\Script\CameraLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\BulletLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\PlayerLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\GunLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\EnemyLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\HealthCreator.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\MainLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\EnemyBulletLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\EnemyCreator.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\CameraLogic.cs" />
+    <Compile Include="Assets\Script\StartMenuScript\MainUILogic.cs" />
+    <Compile Include="Assets\Script\StartMenuScript\StageChooseLogic.cs" />
+    <Compile Include="Assets\Script\StartMenuScript\SettingMenuLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
