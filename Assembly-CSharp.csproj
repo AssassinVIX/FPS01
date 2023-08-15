@@ -58,19 +58,23 @@
   <ItemGroup>
     <Compile Include="Assets\Script\GameSpaceScript\BulletLogic.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\PlayerLogic.cs" />
+    <Compile Include="Assets\Script\StartMenuScript\PersistentSingleton.cs" />
+    <Compile Include="Assets\Script\StartMenuScript\AudioResourceLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\GameSpaceStageMenu.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\GunLogic.cs" />
     <Compile Include="Assets\Script\StartMenuScript\StageChooseLogic.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\EnemyLogic.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\HealthCreator.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\MainLogic.cs" />
+    <Compile Include="Assets\Script\StartMenuScript\AudioManager.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\EnemyBulletLogic.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\EnemyCreator.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\PauseMenuLogic.cs" />
     <Compile Include="Assets\Script\StartMenuScript\MainUILogic.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\CameraLogic.cs" />
     <Compile Include="Assets\Script\StartMenuScript\SettingMenuLogic.cs" />
-    <Compile Include="Assets\Script\StartMenuScript\AudioManager.cs" />
-    <Compile Include="Assets\Script\StartMenuScript\PersistentSingleton.cs" />
-    <Compile Include="Assets\Script\StartMenuScript\AudioResourceLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\PauseLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\StartMenuLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
