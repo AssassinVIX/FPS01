@@ -101,4 +101,18 @@ public class PlayerLogic : MonoBehaviour
         Score = Score + 1;
         ScoreText.text = "玩家得分：" + Score;
     }
+
+    private bool IsSlope(Rigidbody rb)
+    {
+        float slopeHeightMaxDistance = 2f;
+        float heightOffset = 2f;
+
+        RaycastHit hit;
+        if (Physics.Raycast(rb.position + Vector3.up * heightOffset, Vector3.down, out hit, slopeHeightMaxDistance))
+        {
+            return hit.normal != Vector3.up;
+        }
+
+        return false;
+    }
 }
