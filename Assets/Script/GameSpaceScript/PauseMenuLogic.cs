@@ -40,7 +40,6 @@ public class PauseMenuLogic : MonoBehaviour
 
     public void OnStageClick()
     {
-        this.gameObject.SetActive(false);
         StageMenu.SetActive(true);
     }
 

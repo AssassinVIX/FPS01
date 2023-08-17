@@ -32,7 +32,6 @@ public class GameSpaceStageMenu : MonoBehaviour
     private void OnBackClick()
     {
         StageMenu.SetActive(false);
-        PauseMenu.SetActive(true);
     }
 
     private void OnStageChoosingClick()

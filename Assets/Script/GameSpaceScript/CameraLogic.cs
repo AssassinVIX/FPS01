@@ -21,12 +21,15 @@ public class CameraLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 获取鼠标移动的偏移量
-        float mouseY = Input.GetAxis("Mouse Y") * Sensitivity;
-        // 计算垂直方向的旋转
-        RotationX -= mouseY;
-        // 限制角度在设定范围内
-        RotationX = Mathf.Clamp(RotationX, MinYAngle, MaxYAngle); 
-        transform.localRotation = Quaternion.Euler(RotationX, 180f, 0f);
+        if (Time.timeScale == 1)
+        {
+            // 获取鼠标移动的偏移量
+            float mouseY = Input.GetAxis("Mouse Y") * Sensitivity;
+            // 计算垂直方向的旋转
+            RotationX -= mouseY;
+            // 限制角度在设定范围内
+            RotationX = Mathf.Clamp(RotationX, MinYAngle, MaxYAngle);
+            transform.localRotation = Quaternion.Euler(RotationX, 180f, 0f);
+        }
     }
 }

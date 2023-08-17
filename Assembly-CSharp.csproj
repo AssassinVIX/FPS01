@@ -60,8 +60,10 @@
     <Compile Include="Assets\Script\GameSpaceScript\PlayerLogic.cs" />
     <Compile Include="Assets\Script\StartMenuScript\PersistentSingleton.cs" />
     <Compile Include="Assets\Script\StartMenuScript\AudioResourceLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\MonsterAI.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\GameSpaceStageMenu.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\GunLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\DrawArc.cs" />
     <Compile Include="Assets\Script\StartMenuScript\StageChooseLogic.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\HealthCreator.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\MainLogic.cs" />
@@ -73,8 +75,8 @@
     <Compile Include="Assets\Script\GameSpaceScript\CameraLogic.cs" />
     <Compile Include="Assets\Script\StartMenuScript\SettingMenuLogic.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\PauseLogic.cs" />
-    <Compile Include="Assets\Script\GameSpaceScript\DrawArc.cs" />
-    <Compile Include="Assets\Script\GameSpaceScript\MonsterAI.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\VictoryLogic.cs" />
+    <Compile Include="Assets\Script\GameSpaceScript\LoseLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

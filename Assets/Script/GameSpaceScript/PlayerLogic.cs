@@ -20,6 +20,8 @@ public class PlayerLogic : MonoBehaviour
     public float Playerlife = 5;
     public Text HealthText;
     public Text ScoreText;
+    public GameObject VictoryMenu;
+    public GameObject LoseMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,6 @@ public class PlayerLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         float dx = 0;
         float dz = 0;
         //通过获取W,A,S,D四个按键事件改变x、y两个方向的速度
@@ -58,7 +59,6 @@ public class PlayerLogic : MonoBehaviour
                 //判断两次按下空格键时间间隔是否足够长
                 return;
             }
-
             //执行按下空格键操作
             LastSpaceTime = Time.time;
             //引用刚体组件，对物体施加向上的力
@@ -84,15 +84,12 @@ public class PlayerLogic : MonoBehaviour
     }
     public void Unvalue()
     {
-        if (Score > 0)
-        {
-            Score = Score - 1;
-        }
-        Playerlife = Playerlife - 1; 
+        Playerlife = Playerlife - 20; 
         HealthText.text = "当前血量：" + Playerlife;
         if (Playerlife <= 0)
         {
             Destroy(this.gameObject);
+            LoseMenu.SetActive(true);
         }
     }
 
@@ -100,6 +97,11 @@ public class PlayerLogic : MonoBehaviour
     {
         Score = Score + 1;
         ScoreText.text = "玩家得分：" + Score;
+        if (Score == 5)
+        {
+            Time.timeScale = 0;
+            VictoryMenu.SetActive(true);
+        }
     }
 
     private bool IsSlope(Rigidbody rb)
@@ -112,7 +114,6 @@ public class PlayerLogic : MonoBehaviour
         {
             return hit.normal != Vector3.up;
         }
-
         return false;
     }
 }

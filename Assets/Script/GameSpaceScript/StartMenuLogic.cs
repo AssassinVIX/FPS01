@@ -9,12 +9,14 @@ public class StartMenuLogic : MonoBehaviour
     public GameObject StartButton;
     public GameObject StartMenu;
     public GameObject GameUI;
+    public GameObject Gun;
 
     public Button StartBtn;
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 0;
+        Gun.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class StartMenuLogic : MonoBehaviour
 
     public void OnStartBtnClick()
     {
+        Gun.SetActive(true);
         Time.timeScale = 1;
         this.gameObject.SetActive(false);
         GameUI.SetActive(true);
