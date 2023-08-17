@@ -27,19 +27,19 @@ public class DrawArc : MonoBehaviour
     //DrawArc.cs
     //视野角度
 
-    void OnDrawGizmos()
-    {
-        Color color = Handles.color;
-        //设置画笔颜色
-        Handles.color = Color.red;
-        //求起使边
-        int angle = viewAngle / 2;
-        Vector3 startLine = Quaternion.Euler(0, -angle, 0) * this.transform.forward;
-        //画扇形
-        Handles.DrawSolidArc(this.transform.position, this.transform.up, startLine, viewAngle, viewRadius);
-        //恢复颜色
-        Handles.color = color;
-    }
+    //void OnDrawGizmos()
+    //{
+    //    Color color = Handles.color;
+    //    //设置画笔颜色
+    //    Handles.color = Color.red;
+    //    //求起使边
+    //    int angle = viewAngle / 2;
+    //    Vector3 startLine = Quaternion.Euler(0, -angle, 0) * this.transform.forward;
+    //    //画扇形
+    //    Handles.DrawSolidArc(this.transform.position, this.transform.up, startLine, viewAngle, viewRadius);
+    //    //恢复颜色
+    //    Handles.color = color;
+    //}
 
     void SeeOther()
     {

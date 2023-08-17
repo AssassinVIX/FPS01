@@ -51,6 +51,18 @@ public class PlayerLogic : MonoBehaviour
             dz = MoveSpeed;
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            Cursor.visible = true;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftAlt))
+        {
+            if (Cursor.visible == true)
+            {
+                Cursor.visible = false;
+            }
+        }
+
         //获取空格事件，并引用物体刚体组件
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -97,7 +109,7 @@ public class PlayerLogic : MonoBehaviour
     {
         Score = Score + 1;
         ScoreText.text = "玩家得分：" + Score;
-        if (Score == 5)
+        if (Score == 8)
         {
             Time.timeScale = 0;
             VictoryMenu.SetActive(true);

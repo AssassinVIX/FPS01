@@ -32,5 +32,6 @@ public class StartMenuLogic : MonoBehaviour
         Time.timeScale = 1;
         this.gameObject.SetActive(false);
         GameUI.SetActive(true);
+        Cursor.visible = false;
     }
 }

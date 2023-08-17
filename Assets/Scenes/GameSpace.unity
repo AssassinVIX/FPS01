@@ -2470,7 +2470,7 @@ MonoBehaviour:
   StartButton: {fileID: 301144728}
   StartMenu: {fileID: 486203138}
   GameUI: {fileID: 338795394}
-  Gun: {fileID: 0}
+  Gun: {fileID: 2001548845}
   StartBtn: {fileID: 301144730}
 --- !u!1 &487886293
 GameObject:
