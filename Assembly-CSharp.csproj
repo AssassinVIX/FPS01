@@ -67,7 +67,6 @@
     <Compile Include="Assets\Script\GameSpaceScript\DrawArc.cs" />
     <Compile Include="Assets\Script\StartMenuScript\StageChooseLogic.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\VictoryLogic.cs" />
-    <Compile Include="Assets\Script\GameSpaceScript\HealthCreator.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\MainLogic.cs" />
     <Compile Include="Assets\Script\StartMenuScript\AudioManager.cs" />
     <Compile Include="Assets\Script\GameSpaceScript\EnemyBulletLogic.cs" />

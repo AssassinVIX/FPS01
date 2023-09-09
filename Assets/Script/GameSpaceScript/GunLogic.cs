@@ -77,6 +77,7 @@ public class GunLogic : MonoBehaviour
             RemainingAmno = RemainingAmno - OutAmno;
             OutAmno = 0;
             Thread.Sleep(1000);
+            BulletText.text = "当前弹药：" + BulletNum + "/" + RemainingAmno;
             Debug.Log("当前弹药" + BulletNum);
         }
         else

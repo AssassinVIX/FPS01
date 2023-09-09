@@ -28,5 +28,6 @@ public class PauseLogic : MonoBehaviour
         Time.timeScale = 0;
         this.gameObject.SetActive(false);
         PauseMenu.SetActive(true);
+        Cursor.visible = true;
     }
 }

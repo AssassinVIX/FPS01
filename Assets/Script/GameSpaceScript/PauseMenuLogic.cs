@@ -48,6 +48,7 @@ public class PauseMenuLogic : MonoBehaviour
         this.gameObject.SetActive(false);
         PauseButton.SetActive(true);
         Time.timeScale = 1;
+        Cursor.visible = false;
     }
 
     public void OnMenuButtonClick()

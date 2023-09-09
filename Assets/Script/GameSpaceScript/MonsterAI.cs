@@ -16,6 +16,7 @@ public class MonsterAI : MonoBehaviour
     public float FireInterval = 5;
     public Transform FirePoint;
     public GameObject Bullet;
+    public int IndexNum;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +56,7 @@ public class MonsterAI : MonoBehaviour
         if (Vector3.Distance(this.transform.position, nextPosition) < 0.1)
         {
             //更换下一个坐标点
-            pointIndex = Random.Range(0, 4);//随机范围{0,1,2,3}
+            pointIndex = Random.Range(0, IndexNum);//随机范围{0,1,2,3}
         }
     }
     void FollowTarget()

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerLogic : MonoBehaviour
 {
     //角色跳跃时被施加的力，必须拥有刚体组件
-    public readonly float JumpForce = 5f;
+    public float JumpForce = 5f;
     //角色移动速度
     public float MoveSpeed = 5;
     //鼠标灵敏度
@@ -102,6 +102,7 @@ public class PlayerLogic : MonoBehaviour
         {
             Destroy(this.gameObject);
             LoseMenu.SetActive(true);
+            Cursor.visible = true;
         }
     }
 
@@ -113,6 +114,7 @@ public class PlayerLogic : MonoBehaviour
         {
             Time.timeScale = 0;
             VictoryMenu.SetActive(true);
+            Cursor.visible = true;
         }
     }
 
