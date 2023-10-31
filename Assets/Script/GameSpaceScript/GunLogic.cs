@@ -69,7 +69,7 @@ public class GunLogic : MonoBehaviour
 
     public void Reload()
     {
-        if (Count <= Amno)
+        if (Count <= RemainingAmno)
         {
             Debug.Log("换弹中...");
             //按下换弹键后将当前弹药数强制更改为弹匣最大弹药数实现换弹
