@@ -106,15 +106,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3342}
     - Class: 114
-      Script: {instanceID: 3922}
+      Script: {instanceID: 3920}
     - Class: 114
-      Script: {instanceID: 4104}
+      Script: {instanceID: 4102}
     - Class: 114
-      Script: {instanceID: 4170}
+      Script: {instanceID: 4168}
     - Class: 114
-      Script: {instanceID: 4348}
+      Script: {instanceID: 4346}
     - Class: 114
-      Script: {instanceID: 4520}
+      Script: {instanceID: 4518}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -185,11 +185,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3178}
     - Class: 114
-      Script: {instanceID: 3922}
+      Script: {instanceID: 3920}
     - Class: 114
-      Script: {instanceID: 4298}
+      Script: {instanceID: 4296}
     - Class: 114
-      Script: {instanceID: 4510}
+      Script: {instanceID: 4508}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -263,7 +263,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 69bfea38f00b86cb3ccfc2a27960affc
+      Hash: e6857b5f97dcc92758370e15170b5fcd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerLogic
@@ -311,7 +311,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: c9c8ee337b51e5ac1a9ed0258c8f6f1d
+      Hash: 74aad9fb24cdb9e86e539355bcea7daa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MonsterAI
@@ -627,12 +627,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HealthCreator
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca

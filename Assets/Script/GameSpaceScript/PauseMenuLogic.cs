@@ -36,6 +36,10 @@ public class PauseMenuLogic : MonoBehaviour
         BackTo.onClick.AddListener(OnBackClick);
         Stage = StageButton.GetComponent<Button>();
         Stage.onClick.AddListener(OnStageClick);
+        if (Cursor.visible == false)
+        {
+            Cursor.visible = true;
+        }
     }
 
     public void OnStageClick()
